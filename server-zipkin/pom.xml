@@ -33,22 +33,47 @@
 
 		<!--添加依赖开始-->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-			<!--zipkin的依赖-->
-		<dependency>
-			<groupId>io.zipkin.java</groupId>
-			<artifactId>zipkin-server</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>io.zipkin.java</groupId>-->
+			<!--<artifactId>zipkin-server</artifactId>-->
+		<!--</dependency>-->
+		<!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+			<!--&lt;!&ndash;<groupId>io.zipkin.java</groupId>&ndash;&gt;-->
+			<!--&lt;!&ndash;<artifactId>zipkin-storage-mysql</artifactId>&ndash;&gt;-->
+		<!--&lt;!&ndash;</dependency>&ndash;&gt;-->
 
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+		</dependency>
+			<!--图形界面依赖包-->
 		<dependency>
 			<groupId>io.zipkin.java</groupId>
 			<artifactId>zipkin-autoconfigure-ui</artifactId>
+		</dependency>
+			<!--数据库连接依赖-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 		<!--添加依赖结束-->
 
@@ -56,6 +81,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.zipkin.java</groupId>
+			<artifactId>zipkin-storage-mysql</artifactId>
+			<version>RELEASE</version>
 		</dependency>
 	</dependencies>
 
